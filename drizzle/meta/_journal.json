@@ -1,0 +1,34 @@
+{
+	"version": "5",
+	"dialect": "pg",
+	"entries": [
+		{
+			"idx": 0,
+			"version": "5",
+			"when": 1690514881476,
+			"tag": "0000_ordinary_riptide",
+			"breakpoints": true
+		},
+		{
+			"idx": 1,
+			"version": "5",
+			"when": 1690517355129,
+			"tag": "0001_sticky_mole_man",
+			"breakpoints": true
+		},
+		{
+			"idx": 2,
+			"version": "5",
+			"when": 1690517402656,
+			"tag": "0002_past_triton",
+			"breakpoints": true
+		},
+		{
+			"idx": 3,
+			"version": "5",
+			"when": 1690523929001,
+			"tag": "0003_wild_slipstream",
+			"breakpoints": true
+		}
+	]
+}

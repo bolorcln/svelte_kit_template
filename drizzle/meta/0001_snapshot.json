@@ -1,0 +1,107 @@
+{
+	"version": "5",
+	"dialect": "pg",
+	"id": "eb526905-6044-4eae-88fa-612f30060f91",
+	"prevId": "c188f748-c4da-4f4f-aa32-23450adc1349",
+	"tables": {
+		"user_key": {
+			"name": "user_key",
+			"schema": "",
+			"columns": {
+				"id": {
+					"name": "id",
+					"type": "text",
+					"primaryKey": true,
+					"notNull": true
+				},
+				"hashed_password": {
+					"name": "hashed_password",
+					"type": "text",
+					"primaryKey": false,
+					"notNull": false
+				},
+				"user_id": {
+					"name": "user_id",
+					"type": "text",
+					"primaryKey": false,
+					"notNull": true
+				}
+			},
+			"indexes": {},
+			"foreignKeys": {
+				"user_key_user_id_auth_user_id_fk": {
+					"name": "user_key_user_id_auth_user_id_fk",
+					"tableFrom": "user_key",
+					"tableTo": "auth_user",
+					"columnsFrom": ["user_id"],
+					"columnsTo": ["id"],
+					"onDelete": "no action",
+					"onUpdate": "no action"
+				}
+			},
+			"compositePrimaryKeys": {},
+			"uniqueConstraints": {}
+		},
+		"user_session": {
+			"name": "user_session",
+			"schema": "",
+			"columns": {
+				"id": {
+					"name": "id",
+					"type": "text",
+					"primaryKey": true,
+					"notNull": true
+				},
+				"active_expires": {
+					"name": "active_expires",
+					"type": "bigint",
+					"primaryKey": false,
+					"notNull": true
+				},
+				"user_id": {
+					"name": "user_id",
+					"type": "text",
+					"primaryKey": false,
+					"notNull": true
+				}
+			},
+			"indexes": {},
+			"foreignKeys": {
+				"user_session_user_id_auth_user_id_fk": {
+					"name": "user_session_user_id_auth_user_id_fk",
+					"tableFrom": "user_session",
+					"tableTo": "auth_user",
+					"columnsFrom": ["user_id"],
+					"columnsTo": ["id"],
+					"onDelete": "no action",
+					"onUpdate": "no action"
+				}
+			},
+			"compositePrimaryKeys": {},
+			"uniqueConstraints": {}
+		},
+		"auth_user": {
+			"name": "auth_user",
+			"schema": "",
+			"columns": {
+				"id": {
+					"name": "id",
+					"type": "text",
+					"primaryKey": true,
+					"notNull": true
+				}
+			},
+			"indexes": {},
+			"foreignKeys": {},
+			"compositePrimaryKeys": {},
+			"uniqueConstraints": {}
+		}
+	},
+	"enums": {},
+	"schemas": {},
+	"_meta": {
+		"schemas": {},
+		"tables": {},
+		"columns": {}
+	}
+}
